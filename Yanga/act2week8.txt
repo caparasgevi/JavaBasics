@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class act2week8 {
+
+    
+    public static void main(String[] args) {
+   
+    
+   int cwph, cpkw, wmonthly, tkwu, over;
+   
+   Scanner get = new Scanner (System.in);
+   
+   
+   // user input
+   System.out.print("Total watts used per hour: ");
+   cwph = get.nextInt();
+   
+   System.out.print("Cost per kilowatt: ");
+   cpkw = get.nextInt();
+   
+   //formulas
+   wmonthly = cwph * 720; // 360000 ÷ 500 = 720
+   tkwu = wmonthly / 1000; // 1000 watt = 1 kilowatt.
+   over = tkwu * cpkw; // total kilowatt × cost per kiowatt
+   
+   // output
+   System.out.println("Total watts used monthly: " + wmonthly);
+   System.out.println("Total kilowatts used: " + tkwu);
+   System.out.println("Total overdue: " + over);
+  
+  }
+}
+	

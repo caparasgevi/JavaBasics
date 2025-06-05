@@ -1,0 +1,46 @@
+import java.io.*;
+public class Main {
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader input = new BufferedReader (new InputStreamReader(System.in));
+		
+
+		//declaration
+		
+		int cookie;
+		int box = 12;
+		int lefto = 12;
+		
+		System.out.print("Amount of cookies: ");
+		cookie = Integer.parseInt(input.readLine());
+		
+		
+		
+		if (cookie >= 144 )
+		    
+		   { System.out.println("Amount of boxes: "+ cookie/ box);
+		    System.out.println("Amount of containers: "+ (cookie / box) / 12);
+		    System.out.println("Amount of leftovers is: "+ cookie % lefto);}
+		
+		
+		else if (cookie < 144 && cookie >= 12)
+		        
+		   { System.out.println("Amount of boxes: "+ cookie / box);
+		    System.out.println("Amount of containers: 1");
+		    System.out.println("Amount of leftovers is: "+ cookie% lefto);}
+		    
+		  
+		    
+		else
+		
+		  { System.out.println("Your order can not be be processed and shipped.");
+		    System.out.println("It should have no less than 12 cookies in order to buy the minimum number of boxes required.");}
+		    
+		    // note: the number of container displayed is the number of complete containers. (those containers with 12 boxes)
+		    // p.s: container count only increases is there is more than or equal 288 cookies.
+		    
+		    
+		    
+		}
+		
+}

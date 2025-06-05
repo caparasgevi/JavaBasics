@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class act2week7
+
+{
+
+    public static void main(String[] args) {
+        
+        //initialization
+        int num = 487;
+        int hundreds;
+        int tens;
+        int ones;
+        
+        //formula
+        hundreds = (num / 100) % 10;
+        tens = (num / 10) % 10;
+        ones = (num / 1 ) % 10;
+         
+        
+   System.out.println(hundreds + " hundreds," + tens + " tens," + ones + " ones.");
+   
+   
+    }
+   
+    
+}

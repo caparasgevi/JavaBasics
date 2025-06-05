@@ -1,0 +1,60 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Main {
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        String dcount = null;
+        int counter;
+        double price;
+        double total = 0.00;
+        double dq = 0.00;
+       
+        
+        
+        System.out.println("Enter price amounts (maximum of 10, type 0 to terminate) :");
+  
+  // for loop to get and add prices
+        for (counter=0; counter < 10; counter++)
+        {  System.out.print("Amount #" + (counter+1) + ": ");
+        price = input.nextDouble();
+        
+        if (price == 0)
+        { break; }
+        
+        total += price;
+             
+               }
+               
+               
+// discount conditions          
+         if (total > 5000 && total < 7000.50)
+         { dq = 0.10;
+         dcount = "10% of the total price";
+         }
+         else if (total >= 7000.50)
+         { dq = 0.05;
+         dcount = "5% of the total price"; 
+         }
+         
+         else
+         { dcount = "No discount"; }
+         
+// discount amount formula
+       double damt = (total * dq);
+// total amt due formula
+       double totamtdue = total - damt;
+       
+       
+       
+ // displaying total amt, discount, total amt due
+         System.out.println ();
+         System.out.println ( "The (raw) total amount is: P " + total);
+         System.out.println ( "The discount amount and rate is: P " + damt + " // " + dcount);
+         System.out.println ( "The total amount due is: P " + totamtdue);
+         
+        
+	}
+}

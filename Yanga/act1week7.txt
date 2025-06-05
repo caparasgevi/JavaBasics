@@ -1,0 +1,28 @@
+public class act1week7 {
+	public static void main(String[] args) {
+		
+			
+	//initialization 
+	float ccy = 3.75f, cpd = 16.75f, prft = 11.90f; // carton capacity, cost production, profit.
+	int l = 456; // liters.
+	
+	//output 
+	float ncarton, cpdf, prftf; // number of cartons, final cost production, final profit.
+		
+		 	
+    //formulas
+	ncarton = l / ccy; 
+	cpdf = l * cpd; 
+	prftf = prft * ncarton ; 
+	
+    //output
+	System.out.println (" Given liters of milk: " + l + " liters") ;
+	System.out.printf (" Number of milk cartons: " + ncarton + "\n") ;
+	System.out.printf (" Cost of milk production: Php " + cpdf + "\n") ;
+	
+	
+	System.out.printf (" Total profit: Php " + String.format("%.2f", prftf) + "\n") ; // I used String.format("%.2f", (final profit)) to round off the decimals.
+	 
+
+	}
+}

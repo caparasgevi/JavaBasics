@@ -1,0 +1,40 @@
+import java.io.*;
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));   
+       
+       
+       int age;
+       double tixprice= 0;
+      
+       String discountdecision;
+       
+      
+       System.out.print("Input your age: ");
+       age = Integer.parseInt(input.readLine());
+       
+       System.out.print("Do you have a discount coupon? (Yes or No): ");
+       discountdecision = input.readLine();
+       
+       //conditions and formulas
+       if (age > 17 && discountdecision.equals("Yes"))
+       { tixprice = 350 -(350 * .25);}
+   
+       else if (age <= 17 && discountdecision.equals("Yes"))
+       { tixprice = 240 -(240 * .25);}
+            
+       else if (age > 17)
+       { tixprice = 350; }
+       
+       else if (age <= 17)
+       { tixprice = 240; }
+       
+       else
+       { System.out.println("Invalid input.");}
+       
+    
+      System.out.println("The price of your ticket is Php " + tixprice);
+      
+ 
+	}
+}

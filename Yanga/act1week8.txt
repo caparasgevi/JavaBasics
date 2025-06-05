@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class act1week8 {
+    
+    public static void main(String[] args) {
+        
+        // declaration of variables
+        float pricelastyr, pricethisyr, inflation; 
+        String item;
+        
+        
+        Scanner input = new Scanner (System.in);
+        
+        // input
+        System.out.print("Item name: ");
+        item = input.nextLine();
+        
+        System.out.print("Price last year: ");
+        pricelastyr = input.nextFloat();
+        
+        System.out.print("Price this year: ");
+        pricethisyr = input.nextFloat();
+        
+        // inflation formula
+        inflation = (pricethisyr - pricelastyr) / pricelastyr;
+        
+        //output
+        System.out.printf("Inflation rate of " + item + ": "+ (String.format("%.2f", inflation)) + "\n"); // I also used (String.format) again to round off the decimals.
+        
+     
+      
+        
+    }
+    
+}
