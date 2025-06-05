@@ -1,0 +1,56 @@
+import java.io.*;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));   // instance variable input
+       
+       //declarations
+       int option;
+       int price = 0;
+      
+     
+       
+       //program interface
+       System.out.println("Flooring options: ");
+         System.out.println("Option 1: Tiled, concrete for Php 55,000");
+         System.out.println("Option 2: Carpeting, tiled for Php 70,000");
+         System.out.println("Option 3: Wood floors in the living area, carpeting in the bedroom, and tile in the bath area for Php 100,000");
+         System.out.println();
+       
+       
+       
+       
+       //value inputs
+       System.out.print("Your option: ");
+       option = Integer.parseInt(input.readLine());
+       
+       
+       
+       //conditions and formulas   
+       if (option == 1)
+       { price = 55000;
+              System.out.println();
+              System.out.println("The price is Php "+ price + ".");
+       System.out.println("Your selection is: Tiled, concrete."); }
+       
+       else if (option == 2)
+       { price = 70000; 
+              System.out.println();   
+              System.out.println("The price is Php "+ price + ".");
+       System.out.println("Your selection is: Carpeting, tiled.");}
+       
+       else if (option == 3)
+       { price = 100000; 
+              System.out.println();
+              System.out.println("The price is Php "+ price + ".");
+       System.out.println("Your selection is: Wood floors in the living area, carpeting in the bedroom, and tile in the bath area.");}
+       
+       else
+       System.out.println("Invalid input.");
+       
+       
+    
+		
+	}
+}
